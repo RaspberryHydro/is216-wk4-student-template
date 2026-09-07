@@ -3,15 +3,17 @@
 
     // Add code here
     // challenge: use array  
-    
+    const message = ref("Choose your favourite fruit:")
+    const items = ["apple","orange","peach"]
 </script>
 
 <template>
     {{ message }} 
-   
-    <label for=""> <input type="radio" name="fruit"> {{ fruit1 }} </label> 
-    <label for=""> <input type="radio" name="fruit"> {{ fruit2 }} </label> 
-    <label for=""><input type="radio" name="fruit"> {{ fruit3 }} </label> 
+    <template v-for="i in items">
+        <label for="fruit"><input type="radio" name="fruit" >{{ i }}</label> 
+    </template>
+    
+    
     
 </template>
 
